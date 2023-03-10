@@ -261,26 +261,26 @@ namespace {
   constexpr Value CorneredBishop = Value(50);
 
   // Assorted bonuses and penalties
-  constexpr Score UncontestedOutpost  = S(  0, 10);
-  constexpr Score BishopOnKingRing    = S( 24,  0);
-  constexpr Score BishopXRayPawns     = S(  4,  5);
-  constexpr Score FlankAttacks        = S(  8,  0);
-  constexpr Score Hanging             = S( 72, 40);
-  constexpr Score KnightOnQueen       = S( 16, 11);
-  constexpr Score LongDiagonalBishop  = S( 45,  0);
-  constexpr Score MinorBehindPawn     = S( 18,  3);
-  constexpr Score PassedFile          = S( 13,  8);
-  constexpr Score PawnlessFlank       = S( 19, 97);
-  constexpr Score ReachableOutpost    = S( 33, 19);
-  constexpr Score RestrictedPiece     = S(  6,  7);
-  constexpr Score RookOnKingRing      = S( 16,  0);
-  constexpr Score SliderOnQueen       = S( 62, 21);
-  constexpr Score ThreatByKing        = S( 24, 87);
-  constexpr Score ThreatByPawnPush    = S( 48, 39);
-  constexpr Score ThreatBySafePawn    = S(167, 99);
-  constexpr Score TrappedRook         = S( 55, 13);
-  constexpr Score WeakQueenProtection = S( 14,  0);
-  constexpr Score WeakQueen           = S( 57, 19);
+  constexpr Score UncontestedOutpost  = S(  10, 33);
+  constexpr Score BishopOnKingRing    = S( 33,  10);
+  constexpr Score BishopXRayPawns     = S(  20,  25);
+  constexpr Score FlankAttacks        = S(  25,  10);
+  constexpr Score Hanging             = S( 100, 75);
+  constexpr Score KnightOnQueen       = S( 30, 15);
+  constexpr Score LongDiagonalBishop  = S( 75,  25);
+  constexpr Score MinorBehindPawn     = S( 25,  10);
+  constexpr Score PassedFile          = S( 25,  15);
+  constexpr Score PawnlessFlank       = S( 33, 125);
+  constexpr Score ReachableOutpost    = S( 50, 25);
+  constexpr Score RestrictedPiece     = S(  15,  20);
+  constexpr Score RookOnKingRing      = S( 33,  10);
+  constexpr Score SliderOnQueen       = S( 75, 33);
+  constexpr Score ThreatByKing        = S( 33, 100);
+  constexpr Score ThreatByPawnPush    = S( 75, 50);
+  constexpr Score ThreatBySafePawn    = S(200, 125);
+  constexpr Score TrappedRook         = S( 75, 25);
+  constexpr Score WeakQueenProtection = S( 25,  10);
+  constexpr Score WeakQueen           = S( 75, 35);
 
 
 #undef S
