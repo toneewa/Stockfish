@@ -630,12 +630,12 @@ namespace {
         ss->ttPv = PvNode || (ss->ttHit && tte->is_pv());
 
     // At non-PV nodes we check for an early TT cutoff
-    if (  !PvNode
+    if (!PvNode
         && ss->ttHit
         && !excludedMove
-        && tte->depth() > depth - (tte->bound() == BOUND_EXACT)
-        && ttValue != VALUE_NONE // Possible in case of TT access race
-        && (tte->bound() & (ttValue >= beta ? BOUND_LOWER : BOUND_UPPER)))
+        && (tte->depth() > (depth - (tte->bound() == BOUND_EXACT)))
+        && (ttValue != VALUE_NONE) // Possible in case of TT access race
+        && ((tte->bound() & ((ttValue >= beta) ? BOUND_LOWER : BOUND_UPPER)) != 0))
     {
         // If ttMove is quiet, update move sorting heuristics on TT hit (~2 Elo)
         if (ttMove)
@@ -750,8 +750,8 @@ namespace {
         }
 
         // ttValue can be used as a better position evaluation (~7 Elo)
-        if (    ttValue != VALUE_NONE
-            && (tte->bound() & (ttValue > eval ? BOUND_LOWER : BOUND_UPPER)))
+    if ((ttValue != VALUE_NONE)
+            && ((tte->bound() & ((ttValue > eval) ? BOUND_LOWER : BOUND_UPPER)) != 0))
             eval = ttValue;
     }
     else
