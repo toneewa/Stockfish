@@ -426,7 +426,7 @@ namespace {
             score += BishopOnKingRing;
 
         int mob = popcount(b & mobilityArea[Us]);
-        mobility[Us] += MobilityBonus[Pt - 2][mob];
+        mobility[Us] += mob;
 
         if constexpr (Pt == BISHOP || Pt == KNIGHT)
         {
